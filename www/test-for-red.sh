@@ -1,5 +1,6 @@
 #!/bin/bash
-export WEBROOT=/var/www/html
+source ./setwebroot.sh
+# export WEBROOT=/home/${USER}/headless-monitor/www
 
 # set your red limit, most pages are about 1, so anything approaching 2 is going to be pink/red
 pctRedLimit=1.9
