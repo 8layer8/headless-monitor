@@ -1,7 +1,10 @@
 #!/bin/bash
 #  Prereqs: bc imagemagick nginx google-chrome
 # setup
-export WEBROOT=/home/brad/www
+source setwebroot.sh
+#export WEBROOT=/home/${USER}/headless-monitor/www
+echo "WEBROOT is: " ${WEBROOT}
+
 mkdir ${WEBROOT}
 mkdir ${WEBROOT}/archive
 mkdir ${WEBROOT}/24hour
@@ -16,7 +19,7 @@ mkdir ${WEBROOT}/suspicious
 # chmod 755 ${WEBROOT}
 
 # To add or remove a site, edit this file below
-for site in `cat tmr-hosted-domains.txt`
+for site in `cat domains.txt`
 
 	do 
 
